@@ -19,6 +19,7 @@ def counts(line):
 def score(charcounts):
   charcounts.sort()
   charcounts.reverse()
+
   big = 26
   score = 0
 
@@ -29,8 +30,7 @@ def score(charcounts):
   return score
 
 
-line = readline()
-while line:
-  print score(counts(linelist(line)))
+for i in range(1, cases):
   line = readline()
+  print "Case #" + i + ": " + score(counts(linelist(line)))
 
