@@ -21,6 +21,7 @@ def balanced(line, openings):
 
   m = re.search(r"\)", line)
   if m:
+    if openings == 0: return False
     pre = line[:m.start()]
     post = line[m.end():]
     print "Pre): " + pre
