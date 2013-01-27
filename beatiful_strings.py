@@ -3,7 +3,11 @@ import sys
 line = sys.stdin.readline()
 
 def score(line):
-  dict.fromkeys(list(line), 0)
+  counts = dict.fromkeys(list(line), 0)
+  for c in line:
+    counts[c] = counts[c] + 1
+
+  counts.first
 
 line = sys.stdin.readline().rstrip()
 while line:
