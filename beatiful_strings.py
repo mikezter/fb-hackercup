@@ -6,12 +6,12 @@ def readline():
   return sys.stdin.readline().rstrip()
 
 def linelist(line):
-  list(line.lower()).filter(isalpha)
+  list(line.lower(), 0).filter(isalpha)
 
 
 
 def counts(line):
-  counts = dict.fromkeys(list(line), 0)
+  counts = linelist(line)
   for c in line:
     counts[c] = counts[c] + 1
 
