@@ -9,6 +9,7 @@ def readline():
 def balanced(line, openings):
   if line == "": return True
   if re.match(r"^[a-z :]+$", line): return True
+  print openings
 
   m = re.search(r"\(", line)
   if m:
