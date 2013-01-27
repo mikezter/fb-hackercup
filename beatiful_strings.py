@@ -6,7 +6,7 @@ def readline():
   return sys.stdin.readline().rstrip()
 
 def linelist(line):
-  filter(lambda c: c.isalpha(), list(line.lower()))
+  return filter(lambda c: c.isalpha(), list(line.lower()))
 
 
 
