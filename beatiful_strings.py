@@ -13,13 +13,15 @@ def counts(line):
   for c in line:
     counts[c] = counts[c] + 1
 
+  counts = counts.values()
+  counts.sort()
   return counts
 
-def score(linecounts):
+def score(charcounts):
   big = 26
   score = 0
 
-  for i in linecounts.values().sort().reverse():
+  for i in charcounts.reverse():
     score = score + big
     big = big - 1
 
