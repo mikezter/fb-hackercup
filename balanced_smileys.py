@@ -21,6 +21,8 @@ def balanced(line):
     print "Post: " + post
     return balanced(pre) & balanced(inner) & balanced(post)
 
+  if re.search(r"(?<!:)\)", line): return False
+
   return False
 
 def answer(answer):
