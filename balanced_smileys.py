@@ -15,7 +15,7 @@ def balanced(line):
   if m:
     pre = line[:m.start()]
     post = line[m.end():]
-    inner = line[m.start():m.end()]
+    inner = line[m.start() + 1:m.end() - 1]
     return balanced(pre) & balanced(inner) & balanced(post)
 
   return False
