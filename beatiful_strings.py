@@ -1,6 +1,6 @@
 import sys
 
-line = sys.stdin.readline()
+cases = int(sys.stdin.readline())
 
 def readline():
   return sys.stdin.readline().rstrip()
