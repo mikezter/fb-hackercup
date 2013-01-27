@@ -22,7 +22,7 @@ def score(charcounts):
   big = 26
   score = 0
 
-  for i in charcounts.reverse():
+  for i in charcounts:
     score = score + big
     big = big - 1
 
@@ -32,6 +32,6 @@ def score(charcounts):
 line = readline()
 while line:
   print list(line)
-  print (counts(linelist(line)))
+  print score(counts(linelist(line)))
   line = readline()
 
