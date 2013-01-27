@@ -35,6 +35,6 @@ def answer(answer):
 for i in range(cases):
   line = readline()
   print line
-  print "Case #" + str(i + 1) + ": " + answer(balanced(line))
+  print "Case #" + str(i + 1) + ": " + answer(balanced(line, 0))
   print
 
