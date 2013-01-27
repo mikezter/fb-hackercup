@@ -10,7 +10,7 @@ def balanced(line):
   if line == "": return True
   if re.match(r"^[a-z :]+$", line): return True
 
-  m = re.match(r"\(")
+  m = re.match(r"\(", line)
   if m:
     pre = line[:m.start()]
     post = line[m.end():]
