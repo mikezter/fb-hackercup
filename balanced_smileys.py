@@ -15,9 +15,6 @@ def balanced(line, openings = 0):
   if m:
     pre = line[:m.start()]
     post = line[m.end():]
-    print pre
-    print post
-
     return balanced(pre, 0) & balanced(post, openings + 1)
 
   return False
