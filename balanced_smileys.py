@@ -8,7 +8,7 @@ def readline():
 
 def balanced(line, openings = 0):
   if line == "": return True
-  if re.match(r"^([a-z :]|:\)|:\()+$", line): return True
+  if re.match(r"^([a-z :])+$", line): return True
 
   m = re.search(r"(?<!:)\(", line)
 
