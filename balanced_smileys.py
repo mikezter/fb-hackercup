@@ -15,16 +15,16 @@ def balanced(line, openings):
   if m:
     pre = line[:m.start()]
     post = line[m.end():]
-    print "Pre: " + pre
-    print "Post: " + post
+    print "Pre(: " + pre
+    print "Post(: " + post
     return balanced(pre, openings) and balanced(post, openings + 1)
 
   m = re.search(r"\)", line)
   if m and openings > 0:
     pre = line[:m.start()]
     post = line[m.end():]
-    print "Pre: " + pre
-    print "Post: " + post
+    print "Pre): " + pre
+    print "Post): " + post
     return balanced(pre, openings) and balanced(post, openings - 1)
 
   return openings == 0
