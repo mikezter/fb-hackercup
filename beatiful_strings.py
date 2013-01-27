@@ -3,7 +3,7 @@ import sys
 line = sys.stdin.readline()
 
 def readline():
-  line = sys.stdin.readline().rstrip().lower()
+  return sys.stdin.readline().rstrip().lower()
 
 def counts(line):
   counts = dict.fromkeys(list(line), 0)
