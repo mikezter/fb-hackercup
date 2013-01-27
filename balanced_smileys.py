@@ -10,16 +10,13 @@ def balanced(line):
   if line == "": return True
   if re.match(r"^[a-z :]+$", line): return True
 
-  m = re.search(r"\(.*\)", line)
-
+  m = re.match(r"\(")
   if m:
     pre = line[:m.start()]
     post = line[m.end():]
-    inner = line[m.start() + 1:m.end() - 1]
     print "Pre: " + pre
-    print "Inner: " + inner
     print "Post: " + post
-    return balanced(pre) & balanced(inner) & balanced(post)
+    return balanced(pre) & balanced(post)
 
 
   return False
