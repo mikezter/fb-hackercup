@@ -6,7 +6,7 @@ cases = int(sys.stdin.readline())
 def readline():
   return sys.stdin.readline().rstrip()
 
-def balanced(line):
+def balanced(line, openings = 0):
   if line == "": return True
   if re.match(r"^([a-z :]|:\)|:\()+$", line): return True
 
@@ -18,8 +18,7 @@ def balanced(line):
     print pre
     print post
 
-
-    return balanced(pre) & balanced(post)
+    return balanced(pre, 0) & balanced(post, openings + 1)
 
   return False
 
