@@ -6,29 +6,22 @@ cases = int(sys.stdin.readline())
 def readline():
   return sys.stdin.readline().rstrip()
 
-def balanced(line, openings):
-  if line == "": return True
-  if re.match(r"^[a-z :]+$", line): return True
-  print openings
+def balanced(line):
+  was_colon = False
+  smileys = 0
+  frownys = 0
+  pairs = 0
+  for c in list(line):
+    if was_colon:
+      if c == '(': frownys += 1
+      if c == ')': smileys += 1
+    else:
+      if c == '(': pairs += 1
+      if c == ')': pairs -= 1
 
-  m = re.search(r"\(", line)
-  if m:
-    pre = line[:m.start()]
-    post = line[m.end():]
-    print "Pre(: " + pre
-    print "Post(: " + post
-    return balanced(pre, openings) and balanced(post, openings + 1)
+    was_colon = c == ':'
 
-  m = re.search(r"\)", line)
-  if m:
-    if openings == 0: return False
-    pre = line[:m.start()]
-    post = line[m.end():]
-    print "Pre): " + pre
-    print "Post): " + post
-    return balanced(pre, openings) and balanced(post, openings - 1)
-
-  return openings == 0
+  return pairs == 0
 
 def answer(answer):
   if answer: return "YES"
