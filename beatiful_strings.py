@@ -8,7 +8,6 @@ def readline():
 def linelist(line):
   return filter(lambda c: c.isalpha(), list(line.lower()))
 
-
 def counts(line):
   counts = dict.fromkeys(line, 0)
   for c in line:
