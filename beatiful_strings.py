@@ -9,10 +9,9 @@ def linelist(line):
   return filter(lambda c: c.isalpha(), list(line.lower()))
 
 
-
 def counts(line):
-  counts = dict.fromkeys(linelist(line), 0)
-  for c in counts.keys():
+  counts = dict.fromkeys(line, 0)
+  for c in line:
     counts[c] = counts[c] + 1
 
   return counts
@@ -20,6 +19,6 @@ def counts(line):
 line = readline()
 while line:
   print list(line)
-  print counts(line)
+  print counts(linelist(line))
   line = readline()
 
