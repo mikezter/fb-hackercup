@@ -7,7 +7,7 @@ def score(line):
   for c in line:
     counts[c] = counts[c] + 1
 
-  counts.first
+  counts["A"]
 
 line = sys.stdin.readline().rstrip()
 while line:
