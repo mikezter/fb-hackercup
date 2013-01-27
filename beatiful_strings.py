@@ -30,6 +30,7 @@ def score(charcounts):
   return score
 
 
+print cases
 for i in range(1, cases):
   line = readline()
   print "Case #" + str(i) + ": " + str(score(counts(linelist(line))))
