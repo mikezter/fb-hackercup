@@ -12,7 +12,7 @@ def linelist(line):
 
 def counts(line):
   counts = dict.fromkeys(linelist(line), 0)
-  for c in line:
+  for c in counts.keys():
     counts[c] = counts[c] + 1
 
   return counts
