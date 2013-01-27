@@ -24,7 +24,7 @@ def balanced(line, openings):
     post = line[m.end():]
     print "Pre: " + pre
     print "Post: " + post
-    return balanced(pre, openings - 1) & balanced(post, openings)
+    return balanced(pre, openings) & balanced(post, openings - 1)
 
   return openings == 0
 
