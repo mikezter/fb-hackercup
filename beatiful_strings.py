@@ -15,9 +15,20 @@ def counts(line):
 
   return counts
 
+def score(linecounts):
+  big = 26
+  score = 0
+
+  for i in linecounts.values().sort().reverse():
+    score = score + big
+    big = big - 1
+
+  return score
+
+
 line = readline()
 while line:
   print list(line)
-  print counts(linelist(line))
+  print score(counts(linelist(line)))
   line = readline()
 
