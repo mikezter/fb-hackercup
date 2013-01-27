@@ -8,7 +8,7 @@ def readline():
 
 def balanced(line):
   if line == "": return True
-  if re.match(r"^[a-z :]+$", line): return True
+  if re.match(r"^([a-z :]|:\)|:\()+$", line): return True
 
   m = re.search(r"\(.*\)", line)
 
@@ -20,8 +20,6 @@ def balanced(line):
     return balanced(pre) & balanced(pre) & balanced(post)
 
   return False
-
-
 
 def answer(answer):
   if answer: return "YES"
