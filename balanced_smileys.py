@@ -16,6 +16,10 @@ def balanced(line):
     pre = line[:m.start()]
     inner = line[m.start() + 1:m.end() - 1]
     post = line[m.end():]
+    print pre
+    print inner
+    print post
+
 
     return balanced(pre) & balanced(pre) & balanced(post)
 
