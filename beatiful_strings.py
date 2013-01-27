@@ -15,6 +15,7 @@ def counts(line):
 
   counts = counts.values()
   counts.sort()
+  counts.reverse()
   return counts
 
 def score(charcounts):
@@ -31,6 +32,6 @@ def score(charcounts):
 line = readline()
 while line:
   print list(line)
-  print score(counts(linelist(line)))
+  print (counts(linelist(line)))
   line = readline()
 
