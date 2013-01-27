@@ -26,7 +26,7 @@ def balanced(line, openings):
     print "Post: " + post
     return balanced(pre, openings - 1) & balanced(post, openings)
 
-  return False
+  return openings == 0
 
 def answer(answer):
   if answer: return "YES"
