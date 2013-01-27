@@ -16,7 +16,7 @@ def balanced(line, openings):
     post = line[m.end():]
     print "Pre: " + pre
     print "Post: " + post
-    return balanced(pre, openings) & balanced(post, openings + 1)
+    return balanced(pre, openings) and balanced(post, openings + 1)
 
   m = re.search(r"\)", line)
   if m and openings > 0:
@@ -24,7 +24,7 @@ def balanced(line, openings):
     post = line[m.end():]
     print "Pre: " + pre
     print "Post: " + post
-    return balanced(pre, openings) & balanced(post, openings - 1)
+    return balanced(pre, openings) and balanced(post, openings - 1)
 
   return openings == 0
 
