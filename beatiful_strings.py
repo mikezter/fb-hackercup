@@ -24,7 +24,7 @@ def score(charcounts):
   score = 0
 
   for i in charcounts:
-    score = score + big
+    score = score + big * i
     big = big - 1
 
   return score
