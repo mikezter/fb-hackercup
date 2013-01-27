@@ -21,7 +21,7 @@ def balanced(line):
     print post
 
 
-    return balanced(pre) & balanced(pre) & balanced(post)
+    return balanced(pre) & balanced(inner) & balanced(post)
 
   return False
 
