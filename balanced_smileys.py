@@ -16,9 +16,9 @@ def balanced(line):
     pre = line[:m.start()]
     post = line[m.end():]
     inner = line[m.start() + 1:m.end() - 1]
-    print "Pre: " + pre
-    print "Inner: " + inner
-    print "Post: " + post
+  #  print "Pre: " + pre
+  #  print "Inner: " + inner
+  #  print "Post: " + post
     return balanced(pre) & balanced(inner) & balanced(post)
 
   if re.search(r"(?<!:)\)", line): return False
