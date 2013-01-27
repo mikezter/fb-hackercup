@@ -14,14 +14,12 @@ def balanced(line):
 
   if m:
     pre = line[:m.start()]
-    inner = line[m.start() + 1:m.end() - 1]
     post = line[m.end():]
     print pre
-    print inner
     print post
 
 
-    return balanced(pre) & balanced(inner) & balanced(post)
+    return balanced(pre) & balanced(post)
 
   return False
 
