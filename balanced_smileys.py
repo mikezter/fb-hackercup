@@ -19,6 +19,8 @@ def balanced(line):
       if c == '(': pairs += 1
       if c == ')': pairs -= 1
 
+    if pairs < 0: return False
+
     was_colon = c == ':'
 
   return pairs == 0
