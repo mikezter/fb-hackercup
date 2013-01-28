@@ -28,6 +28,7 @@ def balanced(line):
 
     was_colon = c == ':'
 
+  print pairs, frownys, smileys
   return pairs == 0 or pairs == smileys * -1
 
 def isvalid(s):
