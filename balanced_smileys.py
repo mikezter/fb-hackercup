@@ -19,12 +19,12 @@ def balanced(line):
     if c == '(': pairs += 1
     if c == ')': pairs -= 1
 
-    if pairs < 0 and frownys < 1: return False
-
     was_colon = c == ':'
 
   print pairs, frownys, smileys
-  return pairs == 0 or pairs == smileys * -1 or pairs == frownys
+  if pairs < 0: return pairs * -1 == frownys
+  if pairs > 0: return pairs == smileys
+  return pairs == 0
 
 def isvalid(s):
   return re.match(r'[a-z :]*$', s)
