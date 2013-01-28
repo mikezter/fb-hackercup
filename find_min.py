@@ -14,8 +14,8 @@ def buildlist(a, b, c, r, k):
   return m
 
 for i in range(cases):
-  n, k = [int(i) for i in readline().split()]
-  a, b, c, r = [int(i) for i in readline().split()]
+  n, k = [int(j) for j in readline().split()]
+  a, b, c, r = [int(j) for j in readline().split()]
 
   print buildlist(a, b, c, r, k)
   print "Case #" + str(i + 1) + ": "
