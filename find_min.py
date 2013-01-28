@@ -17,4 +17,4 @@ for i in range(cases):
   length, knowns = [int(i) for i in readline().split()]
   a, b, c, r = [int(i) for i in readline().split()]
   print buildlist(a, b, c, r, knowns)
-  print "Case #" + str(i + 1) + ": " )
+  print "Case #" + str(i + 1) + ": "
