@@ -23,6 +23,10 @@ def balanced(line):
       if c == '(': pairs += 1
       if c == ')': pairs -= 1
 
+    if smileys == 1:
+      if pairs == 0:
+        smileys -= 1
+
     if pairs == -1:
       if frownys > 0:
         frownys -= 1
