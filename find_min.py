@@ -34,6 +34,7 @@ for i in range(cases):
   memo = buildlist(a, b, c, r, k)
 
   for x in range(n - k):
+    print memo
     memo = nextlist(memo)
 
   print "Case #" + str(i + 1) + ": " + str(memo[-1])
