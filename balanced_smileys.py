@@ -28,12 +28,8 @@ def balanced(line):
         return False
 
 
-  print pairs, frownys, smileys
   if pairs > 0: return pairs == smileys
   return pairs == 0
-
-def isvalid(s):
-  return re.match(r'[a-z :]*$', s)
 
 def answer(answer):
   if answer: return "YES"
@@ -41,7 +37,5 @@ def answer(answer):
 
 for i in range(cases):
   line = readline()
-  print line
   print "Case #" + str(i + 1) + ": " + answer(balanced(line))
-  print
 
