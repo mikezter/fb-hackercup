@@ -20,7 +20,6 @@ def balanced(line):
     if c == ')': pairs -= 1
 
     was_colon = c == ':'
-    print c
 
   print pairs, frownys, smileys
   return pairs == 0 or pairs == smileys * -1 or pairs == frownys
