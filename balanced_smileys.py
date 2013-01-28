@@ -23,7 +23,7 @@ def balanced(line):
     print c
 
   print pairs, frownys, smileys
-  return pairs == 0 or pairs == smileys * -1
+  return pairs == 0 or pairs == smileys * -1 or pairs == frownys
 
 def isvalid(s):
   return re.match(r'[a-z :]*$', s)
