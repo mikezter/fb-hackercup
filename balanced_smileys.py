@@ -6,7 +6,7 @@ def readline():
   return sys.stdin.readline().rstrip()
 
 def invalid(c):
-  return ord(c) not in range(97, 110) and c not in [' ', ':', '(', ')']
+  return ord(c) not in range(97, 122) and c not in [' ', ':', '(', ')']
 
 def balanced(line):
   was_colon = False
