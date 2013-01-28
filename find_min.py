@@ -19,8 +19,8 @@ def nextlist(m):
   new = l[0] - 1
   if new < 0:
     for i in l:
-      new = l[i] + 1
-      if i not in l: break
+      new = i + 1
+      if new not in l: break
 
   del(m[0])
   m.append(new)
