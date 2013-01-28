@@ -13,7 +13,8 @@ def buildlist(a, b, c, r, k):
 
   return m
 
-def nextlist(l):
+def nextlist(m):
+  l = list(m)
   l.sort()
   new = l[0] - 1
   if new < 0:
@@ -21,9 +22,9 @@ def nextlist(l):
       new = i + 1
       if new not in l: break
 
-  del(l[0])
-  l.append(new)
-  return l
+  del(m[0])
+  m.append(new)
+  return m
 
 
 for i in range(cases):
