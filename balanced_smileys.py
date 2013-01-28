@@ -29,7 +29,6 @@ def balanced(line):
 
 
   print pairs, frownys, smileys
-  if pairs < 0: return pairs * -1 == frownys
   if pairs > 0: return pairs == smileys
   return pairs == 0
 
