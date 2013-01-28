@@ -14,7 +14,7 @@ def buildlist(a, b, c, d, knowns):
   return m
 
 for i in range(cases):
-  length, knowns = readline().split()
-  a, b, c, d = readline().split()
+  length, knowns = map(int, readline().split())
+  a, b, c, d = map(int, readline().split())
   print buildlist(a, b, c, d, knowns)
   print "Case #" + str(i + 1) + ": " + answer(balanced(line))
