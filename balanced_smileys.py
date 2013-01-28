@@ -28,7 +28,7 @@ def balanced(line):
 
     was_colon = c == ':'
 
-  return pairs == 0 or pairs == smileys
+  return pairs == 0 or pairs == smileys * -1
 
 def isvalid(s):
   return re.match(r'[a-z :]*$', s)
