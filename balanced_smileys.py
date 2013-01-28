@@ -1,10 +1,12 @@
 import sys
-import re
 
 cases = int(sys.stdin.readline())
 
 def readline():
   return sys.stdin.readline().rstrip()
+
+def invalid(c):
+  return not(ord(c) in range(97, 110) or c in [' ', ':'])
 
 def balanced(line):
   was_colon = False
@@ -13,6 +15,7 @@ def balanced(line):
   pairs = 0
 
   for c in list(line):
+    if invalid(c): return False
     if was_colon:
       if c == '(': frownys += 1
       if c == ')': smileys += 1
