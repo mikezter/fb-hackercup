@@ -15,7 +15,7 @@ def balanced(line):
   pairs = 0
 
   for c in list(line):
-    if invalid(c): print(c);return False
+    if invalid(c): print(c)#return False
     if was_colon:
       if c == '(': frownys += 1
       if c == ')': smileys += 1
