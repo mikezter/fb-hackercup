@@ -16,11 +16,10 @@ def buildlist(a, b, c, r, k):
 def nextlist(m):
   l = list(m)
   l.sort()
-  new = l[0] - 1
-  if new < 0:
-    for i in l:
-      new = i + 1
-      if new not in l: break
+  new = 0
+  for i in l:
+    new = i + 1
+    if new not in l: break
 
   del(m[0])
   m.append(new)
