@@ -13,9 +13,27 @@ def buildlist(a, b, c, r, k):
 
   return m
 
+def nextlist(m):
+  l = list(m)
+  l.sort()
+  new = l[0] - 1
+  if new < 0:
+    for i in l:
+      new = l[i] + 1
+      if i not in l: break
+
+  del(m[0])
+  m.append(new)
+  return m
+
+
 for i in range(cases):
   n, k = [int(j) for j in readline().split()]
   a, b, c, r = [int(j) for j in readline().split()]
 
-  print buildlist(a, b, c, r, k)
-  print "Case #" + str(i + 1) + ": "
+  memo = buildlist(a, b, c, r, k)
+
+  for x in range(n - k):
+    memo = nextlist(memo)
+
+  print "Case #" + str(i + 1) + ": " + str(memo[-1])
