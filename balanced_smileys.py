@@ -19,7 +19,12 @@ def balanced(line):
       if c == '(': pairs += 1
       if c == ')': pairs -= 1
 
-    if pairs < 0: return False
+    if pairs < 0:
+      if frownys < 1:
+        return False
+      else:
+        pairs -= 1
+        frownys -= 1
 
     was_colon = c == ':'
 
