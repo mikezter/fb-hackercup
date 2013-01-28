@@ -28,7 +28,7 @@ def balanced(line):
 
     was_colon = c == ':'
 
-  return pairs == 0
+  return pairs == 0 or pairs == smileys
 
 def answer(answer):
   if answer: return "YES"
