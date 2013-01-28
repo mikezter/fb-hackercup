@@ -6,10 +6,10 @@ def readline():
   return sys.stdin.readline().rstrip()
 
 def buildlist(a, b, c, d, knowns):
-  m = list(knowns)
-  m[0] = a
+  m = []
+  m.append(a)
   for i in range(knowns - 1):
-    m[i + 1] = (b * m[i] + c) % r
+    m.append((b * m[i] + c) % r)
 
   return m
 
