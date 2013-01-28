@@ -30,6 +30,9 @@ def balanced(line):
 
   return pairs == 0 or pairs == smileys
 
+def isvalid(s):
+  return re.match(r'[a-z :]*$', s)
+
 def answer(answer):
   if answer: return "YES"
   return "NO"
