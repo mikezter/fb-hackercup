@@ -17,9 +17,11 @@ def nextlist(m):
   l = list(m)
   l.sort()
   new = 0
-  for i in l:
-    new = i + 1
-    if new not in l: break
+
+  if l[0] == 0:
+    for i in l:
+      new = i + 1
+      if new not in l: break
 
   del(m[0])
   m.append(new)
